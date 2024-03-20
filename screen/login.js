@@ -26,7 +26,7 @@ const Login = () => {
                 AsyncStorage.setItem("refreshToken:", response?.data?.refresh);
 
                 if (response?.data?.user_role === 0) {
-                    navigation.navigate('Dashboard')
+                    navigation.replace('Dashboard')
                 } else {
                     localStorage.clear();
                     navigation.navigate('Login')
