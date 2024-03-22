@@ -5,7 +5,16 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "com.minutesApp.authsessiongoogle",
     "userInterfaceStyle": "light",
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.510228068024-l00m4obctno5ltvg2jlfvlf0vdv42fmb"
+        }
+      ]
+    ],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -15,9 +24,18 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.minutesApp.authsessiongoogle",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": ["com.googleusercontent.apps.510228068024-l00m4obctno5ltvg2jlfvlf0vdv42fmb"]
+          }
+        ]
+      }
     },
     "android": {
+      "package": "com.minutesApp.authsessiongoogle",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +43,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3ad42155-fb6c-4794-924b-c4ef932efe04"
+      }
     }
   }
 }

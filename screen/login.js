@@ -101,11 +101,12 @@ const Login = () => {
                 <Button
                     mode="text"
                     style={styles.registerButton}
-                    onPress={() => console.log('Pressed')}
+                    onPress={() => navigation.navigate('Register')}
                 >
                     Register
                 </Button>
             </View>
+            {/* <GoogleSignIn/> */}
         </SafeAreaView>
     );
 };
